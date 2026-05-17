@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#D3D5FE">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Lode Planner">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>Lode Planner</title>
+</head>
+<body>
+  <div id="app">
+    <header class="topbar">
+      <button id="routineBtn" class="pill-btn">Routine</button>
+      <div class="brand"><h1>Lode Planner</h1><p>Scuola, arte, routine e lode.</p></div>
+      <button id="addBtn" class="round-btn">+</button>
+    </header>
+
+    <main>
+      <section id="dashboard" class="screen active"></section>
+      <section id="school" class="screen"></section>
+      <section id="calendar" class="screen"></section>
+      <section id="todo" class="screen"></section>
+      <section id="assistant" class="screen"></section>
+    </main>
+
+    <nav class="bottom-nav">
+      <button data-screen="dashboard" class="active">Dashboard</button>
+      <button data-screen="school">Scuola</button>
+      <button data-screen="calendar">Calendario</button>
+      <button data-screen="todo">To-do</button>
+      <button data-screen="assistant">Assistente</button>
+    </nav>
+  </div>
+
+  <aside id="routineDrawer" class="drawer left"><div class="drawer-card"><div class="drawer-head"><h2>Routine</h2><button data-close="routineDrawer">×</button></div><div id="routineContent"></div></div></aside>
+  <aside id="addMenu" class="drawer right compact"><div class="drawer-card"><div class="drawer-head"><h2>Aggiungi</h2><button data-close="addMenu">×</button></div><div id="addContent"></div></div></aside>
+
+  <div id="toast" class="toast"></div>
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
